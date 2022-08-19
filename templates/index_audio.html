@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% set active_page = "audio" %}
+
+{% block title %}Audio{% endblock %}
+
+{% block head %}
+{{ super() }}
+
+
+{% endblock %}
+
+{% block page_content %}
+<audio controls autoplay loop>
+
+    <source src="http://localhost:8000/video/video"
+            type="video/mp4">
+
+    Sorry, your browser doesn't support embedded videos.
+</audio>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+
+
+{% endblock %}

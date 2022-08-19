@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% set active_page = "video" %}
+
+{% block title %}Video{% endblock %}
+
+{% block head %}
+{{ super() }}
+
+
+{% endblock %}
+
+{% block page_content %}
+<h1>Sample video</h1>
+<center>
+    <video controls autoplay loop preload="auto" width="80%">
+
+        <source src="http://localhost:8000/video/video"
+                type="video/mp4">
+
+        Sorry, your browser doesn't support embedded videos.
+    </video>
+</center>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+
+
+{% endblock %}

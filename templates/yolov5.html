@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% set active_page = "yolov5" %}
+
+{% block title %}Yolov5{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block page_content %}
+<div class="col-12 up-area">
+    <h1>Show me the ramen!</h1>
+    <input type="file" name="file" id="file">
+    <!-- Drag and Drop container-->
+    <div class="upload-area" id="uploadfile">
+        <br>
+        <br>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-primary btn-lg" >Click!!</button>
+    </div>
+</div>
+
+
+
+<div class="up-area">
+    <div class="colorpalette">
+        <div id="result" class="up-area">
+            <center>
+                <div id="original" class="up-area">
+                </div>
+            <center>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+
+<script type="module" src="{{ url_for('static', path='/js/dragdrop_yolov5.js') }}"></script>
+
+{% endblock %}
